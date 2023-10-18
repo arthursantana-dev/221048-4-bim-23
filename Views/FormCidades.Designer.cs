@@ -199,6 +199,7 @@
             this.Name = "FormCidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Cidades";
+            this.Load += new System.EventHandler(this.FormCidades_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCidades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
