@@ -22,11 +22,13 @@ namespace _221048.Models
             try
             {
                 Banco.AbrirConexao();
-                Banco.Comando = new MySqlCommand("SELECT * FROM Cidades WHERE nome like @nome" +
+                Banco.Comando = new MySqlCommand("SELECT * FROM Cidades WHERE nome like @Nome" +
                     "order by nome", Banco.Conexao);
-                Banco.Comando.Parameters.AddWithValue("@nome", nome + "%");
+                Banco.Comando.Parameters.AddWithValue("@Nome", nome + "%");
                 Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);
+                Banco.dataTabela = new DataTable();
                 Banco.Adaptador.Fill(Banco.dataTabela);
+                Console.WriteLine("ate aqui");
                 Banco.FecharConexao();
                 return Banco.dataTabela;
             } catch (Exception ex)
