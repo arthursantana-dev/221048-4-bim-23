@@ -86,6 +86,7 @@
             this.buttonIncluir.TabIndex = 4;
             this.buttonIncluir.Text = "Incluir";
             this.buttonIncluir.UseVisualStyleBackColor = true;
+            this.buttonIncluir.Click += new System.EventHandler(this.buttonIncluir_Click);
             // 
             // buttonAlterar
             // 
@@ -95,6 +96,7 @@
             this.buttonAlterar.TabIndex = 5;
             this.buttonAlterar.Text = "Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
             // 
             // buttonCancelar
             // 
@@ -104,6 +106,7 @@
             this.buttonCancelar.TabIndex = 6;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonExcluir
             // 
@@ -113,6 +116,7 @@
             this.buttonExcluir.TabIndex = 7;
             this.buttonExcluir.Text = "Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
             // buttonFechar
             // 
@@ -122,6 +126,7 @@
             this.buttonFechar.TabIndex = 8;
             this.buttonFechar.Text = "Fechar";
             this.buttonFechar.UseVisualStyleBackColor = true;
+            this.buttonFechar.Click += new System.EventHandler(this.buttonFechar_Click);
             // 
             // textBoxUF
             // 
@@ -163,6 +168,7 @@
             this.buttonConsultar.TabIndex = 13;
             this.buttonConsultar.Text = "Pesquisar";
             this.buttonConsultar.UseVisualStyleBackColor = true;
+            this.buttonConsultar.Click += new System.EventHandler(this.buttonConsultar_Click);
             // 
             // dataGridViewCidades
             // 
@@ -174,6 +180,7 @@
             this.dataGridViewCidades.Name = "dataGridViewCidades";
             this.dataGridViewCidades.Size = new System.Drawing.Size(397, 150);
             this.dataGridViewCidades.TabIndex = 14;
+            this.dataGridViewCidades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCidades_CellClick);
             // 
             // FormCidades
             // 

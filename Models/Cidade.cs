@@ -22,19 +22,67 @@ namespace _221048.Models
             try
             {
                 Banco.AbrirConexao();
-                Banco.Comando = new MySqlCommand("SELECT * FROM Cidades WHERE nome like @Nome" +
-                    "order by nome", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("USE vendas; SELECT * FROM Cidades WHERE nome like @Nome order by nome;", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@Nome", nome + "%");
                 Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);
                 Banco.dataTabela = new DataTable();
                 Banco.Adaptador.Fill(Banco.dataTabela);
-                Console.WriteLine("ate aqui");
                 Banco.FecharConexao();
                 return Banco.dataTabela;
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
+            }
+        }
+
+        public void Incluir()
+        {
+            try
+            {
+                Banco.AbrirConexao();
+                Banco.Comando = new MySqlCommand("INSERT INTO cidades (nome, uf) VALUES (@nome, @uf)", Banco.Conexao);
+                Banco.Comando.Parameters.AddWithValue("@nome", nome);
+                Banco.Comando.Parameters.AddWithValue("@uf", uf);
+                Banco.Comando.ExecuteNonQuery();
+                Banco.FecharConexao();
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error );
+            }
+        }
+
+        public void Alterar()
+        {
+            try
+            {
+                Banco.AbrirConexao();
+                Banco.Comando = new MySqlCommand("UPDATE cidades SET nome = @nome, uf = @uf where @id = id;", Banco.Conexao);
+                Banco.Comando.Parameters.AddWithValue("@nome", nome);
+                Banco.Comando.Parameters.AddWithValue("@uf", uf);
+                Banco.Comando.Parameters.AddWithValue("@id", id);
+                Banco.Comando.ExecuteNonQuery();
+                Banco.FecharConexao();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void Excluir()
+        {
+            try
+            {
+                Banco.AbrirConexao();
+                Banco.Comando = new MySqlCommand("DELETE FROM cidades where @id = id;", Banco.Conexao);
+                Banco.Comando.Parameters.AddWithValue("@id", id);
+                Banco.Comando.ExecuteNonQuery();
+                Banco.FecharConexao();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
