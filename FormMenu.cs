@@ -29,5 +29,17 @@ namespace _221048
             FormCidades form = new FormCidades();
             form.Show();
         }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCategoria form = new FormCategoria();  
+            form.Show();
+        }
+
+        private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMarca form = new FormMarca();
+            form.Show();
+        }
     }
 }
