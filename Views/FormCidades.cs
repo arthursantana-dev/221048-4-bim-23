@@ -115,5 +115,105 @@ namespace _221048.Views
         {
             Close();
         }
+
+        private void dataGridViewClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBoxNomeCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxVenda_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxNome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxCidades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxFoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxUF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextBoxCpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerDataNascimento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxRenda_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPesquisa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewCidades_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
